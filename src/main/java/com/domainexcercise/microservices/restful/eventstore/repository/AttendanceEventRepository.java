@@ -9,7 +9,8 @@ import com.domainexcercise.microservices.restful.eventstore.model.AttendanceEven
 
 public interface AttendanceEventRepository extends JpaRepository<AttendanceEvent, Long> {
 
-    List<AttendanceEvent> findByEmployeeIdAndTimestampBetween(Long employeeId, LocalDateTime atStartOfDay,
-            LocalDateTime atTime);
+    List<AttendanceEvent> findByEmployeeIdAndTimestampBetween(Long employeeId, LocalDateTime atStartOfDay,LocalDateTime atTime);
+
+    List<AttendanceEvent> findAllEventsByTimestampBetween(LocalDateTime atStartOfDay, LocalDateTime atTime);
     
 }

@@ -20,8 +20,6 @@ import com.domainexcercise.microservices.restful.eventstore.service.KafkaProduce
 @RequestMapping("/api/swipe")
 public class SwipeController {
 
-    @Autowired
-    private KafkaProducer kafkaProducer;
 
     @Autowired
     private AttendanceEventRepository attendanceEventRepository;
